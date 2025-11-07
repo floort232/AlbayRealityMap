@@ -4,11 +4,11 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import androidx.preference.PreferenceManager
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.preference.PreferenceManager
 import org.osmdroid.config.Configuration
 
 class MainActivity : AppCompatActivity() {
@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, CurrentLoc::class.java)
             startActivity(intent)
         }
-
     }
 
     override fun onRequestPermissionsResult(
