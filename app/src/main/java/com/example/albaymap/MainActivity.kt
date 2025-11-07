@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var button1: Button
     private lateinit var button2: Button
-    private lateinit var button3: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, CurrentLoc::class.java)
             startActivity(intent)
         }
+
     }
 
     override fun onRequestPermissionsResult(
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == 100) {
             if (grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
-                Toast.makeText(this, "Permissions granted ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Permissions granted", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Permissions denied.", Toast.LENGTH_LONG).show()
             }

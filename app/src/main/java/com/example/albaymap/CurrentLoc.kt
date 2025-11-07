@@ -26,7 +26,7 @@ class CurrentLoc : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // This line is important for osmdroid to work correctly
-        Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this))
+        Configuration.getInstance().load(applicationContext, PreferenceManager.getDefaultSharedPreferences(applicationContext))
 
         setContentView(R.layout.activity_current_loc)
         mapView = findViewById(R.id.mapView)
